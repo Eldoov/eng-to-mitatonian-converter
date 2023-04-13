@@ -4,13 +4,14 @@ dictionary = {'i': 'i', 'ɪ': '1', 'e': 'e', 'ɛ': '3', 'æ': '5', 'ʌ': '6', '�
               'θ': '\'', 'ð': ';', 's': 's', 'z': 'z', 'ʃ': 'p', 'ʒ': 'q', 'h': 'h', 'ʧ': 'y',
               'ʤ': 'x', 'm': 'm', 'n': 'n', 'ŋ': 'c', 'l': 'l', 'r': 'r', 'w': 'w', 'j': 'j',
               '0': '9', '1': '[', '2': '8', '3': '\\', '4': ']', '5': '0', '6': '/', '7': '=',
-              'ˈ': '$', 'ˌ': '$'}
+              'ˈ': '$', 'ˌ': '$', '\'': ''}
 
 
 def changeDiph(text):
-    diphthongList = ['eɪ', 'oʊ', 'ɪə', 'ʊə', 'əʊ', 'ɑɪ', 'ɑʊ', 'ɔɪ']
+    diphthongList = ['eɪ', 'oʊ', 'ɪə', 'ʊə', 'əʊ', 'aɪ', 'aʊ', 'ɔɪ']
     for i in range(8):
         text = text.replace(diphthongList[i], str(i))
+    print(text)
     return text
 
 
@@ -40,7 +41,7 @@ def translate(text):
             word = ''
 
     removeList = ['$ ', ' $', '  ', ' ', '**', '*']
-    repList = ['', '', '*', '', ',', ',']
+    repList = ['', '', '*', '', ',', ' ']
     for i in range(6):
         translation = translation.replace(removeList[i], repList[i])
 

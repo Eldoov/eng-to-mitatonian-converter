@@ -15,9 +15,9 @@ The translator can
 
 #### The program needs eng-to-ips, PIL, and the custom font 'Mitatonian-regular' to work.
 
-`pip install eng-to-ipa
+`pip install eng-to-ipa`
 
-pip install Pillow`
+`pip install Pillow`
 
 
 

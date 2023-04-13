@@ -15,6 +15,7 @@ def translate(text):
     text = ipa.convert(text)
     print(text)
     new_text = translator.get(text)
+    print(new_text)
     return new_text
 
 
@@ -22,8 +23,10 @@ def transFile(filePath):
     final_line = ''
     for line in open(filePath):
         new_line = translate(line)
-        final_line = final_line + new_line 
-    outputPic(final_line, 30)
+        final_line = final_line + new_line
+    with open('output.txt', 'w', encoding='utf-8') as f:
+        f.write(final_line)
+    #outputPic(final_line, 30)
 
 
 def Start():
@@ -31,7 +34,7 @@ def Start():
         choice = None
         while choice is None:
             try:
-                print("Welcome to English-to-Mitatonian converter.")
+                print("\nWelcome to English-to-Mitatonian converter.")
                 print("Do you want to:")
                 print("1. Translate a sentence. | 2. Translate a file. | 0. Quit.")
                 choice = int(input())

@@ -21,7 +21,7 @@ def transFile(filePath):
     final_line = ''
     for line in open(filePath):
         new_line = translate(line)
-        final_line = new_line + final_line
+        final_line = final_line + new_line 
     outputPic(final_line, 30)
 
 

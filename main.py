@@ -13,6 +13,7 @@ def outputPic(text, fontSize=30):
 
 def translate(text):
     text = ipa.convert(text)
+    print(text)
     new_text = translator.get(text)
     return new_text
 
@@ -55,5 +56,5 @@ def Start():
             quit()
 
 
+#print(translate('hello world'))
 Start()
-

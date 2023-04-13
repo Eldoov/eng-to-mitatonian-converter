@@ -28,6 +28,7 @@ def transLetter(letter, dic):
 
 
 def translate(text):
+    text = changeDiph(text)
     text = addSpace(text)  # add space for dictionary to recognize
     translation = ''
     word = ''
